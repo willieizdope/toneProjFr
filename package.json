@@ -1,0 +1,26 @@
+{
+  "name": "webpack-tone",
+  "version": "1.0.0",
+  "description": "webpack and node and tone.js in one yummy folder",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack -w"
+  },
+  "keywords": [
+    "webpack",
+    "node",
+    "tone.js",
+    "fun",
+    "stellar"
+  ],
+  "author": "Willie Vogel",
+  "license": "MIT",
+  "dependencies": {
+    "tone": "^14.7.77",
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.2"
+  }
+}
