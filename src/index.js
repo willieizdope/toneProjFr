@@ -15,6 +15,7 @@ import * as Tone from 'tone';
 
 const synth = new Tone.Synth().toDestination();
 const now = Tone.now()
-synth.triggerAttackRelease("C4", "4n", now)
-synth.triggerAttackRelease("F4", "8n", now + 0.5)
-synth.triggerAttackRelease("G4", "8n", now + 1)
+synth.triggerAttackRelease("A3", "4n", now)
+synth.triggerAttackRelease("C#4", "8n", now + 0.5)
+synth.triggerAttackRelease("E4", "4n", now + 1)
+synth.triggerAttackRelease("G#4", "8n", now + 1.5)
