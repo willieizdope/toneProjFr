@@ -13,8 +13,16 @@ import * as Tone from 'tone';
 // wait one second before triggering the release
 //synth.triggerRelease(now + 1)
 
-const synth = new Tone.Synth().toDestination();
+// const synth = new Tone.Synth().toDestination();
+// const now = Tone.now()
+// synth.triggerAttackRelease("A3", "4n", now)
+// synth.triggerAttackRelease("C#4", "8n", now + 0.5)
+// synth.triggerAttackRelease("E4", "4n", now + 1)
+// synth.triggerAttackRelease("G#4", "8n", now + 1.5)
+
+const pingPong = new Tone.PingPongDelay("8n", 0.2).toDestination();
 const now = Tone.now()
+const synth = new Tone.Synth().connect(pingPong);
 synth.triggerAttackRelease("A3", "4n", now)
 synth.triggerAttackRelease("C#4", "8n", now + 0.5)
 synth.triggerAttackRelease("E4", "4n", now + 1)
