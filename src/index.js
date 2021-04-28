@@ -71,6 +71,27 @@ document.addEventListener("keyup", e =>{
   }
 });
 
+//create a clock that ticks every second, to make sure it is all working correctly 
+const clock = new Tone.Clock(time => {
+	console.log(time);
+}, 1);
+clock.start();
+
+const kick = new Tone.MembraneSynth().toDestination();
+synth.triggerAttackRelease("C2", "8n");
+
+let loopBeat;
+
+function setup(){
+  loopBeat = new Tone.Loop(song, '4n' );
+  Tone.Transport.start();
+  loopBeat.start(0);
+}
+
+function song(time){
+  console.log(time);
+}
+
 //create a synth and connect it to the main output (your speakers)
 //const synth = new Tone.Synth().toDestination();
 
