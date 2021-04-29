@@ -20,11 +20,11 @@ after you have made the correct amount of white/black keys for your keyboard it 
 we will use flexboxes to order the keys, center them, and make them look like a piano
 an in depth css explination (with examples) can be found here: https://dev.to/shimphillip/building-a-piano-with-tone-js-5c2f
 
-#js
+# js
 in your main js file (if copied from my github src->index.js) you must IMPORT the tone.js
 that looks a little something like this:
 import * as Tone from 'tone';
-
+# making the piano work
 but before we can use this awesome JS library we must play with the piano we created! lets grab our piano into a variable. 
 const piano = document.getElementById("piano");
 
@@ -89,6 +89,7 @@ document.addEventListener("keyup", e =>{
   }
 });
 
+# working with tone.js
 now, after all them schenannigans lets make a basic sythesizer with tone.js
 we need to create a variable to store the synth in. using "new Tone.Sythn();" we can store a synth in a variable. it looks like this:
 const synth = new Tone.Synth();
